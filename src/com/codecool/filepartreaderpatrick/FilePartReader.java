@@ -28,7 +28,7 @@ public class FilePartReader {
         }
     }
 
-    public String read() throws FileNotFoundException, IOException {
+    public String read() throws IOException {
         FileReader fileReader = new FileReader(filePath);
         StringBuilder stringBuilder = new StringBuilder();
         int i;
@@ -36,7 +36,7 @@ public class FilePartReader {
         return stringBuilder.toString();
     }
 
-    public String readLines() throws FileNotFoundException, IOException {
+    public String readLines() throws IOException {
         String file = read();
         char[] arrayChar = file.toCharArray();
         StringBuilder stringBuilder = new StringBuilder();
